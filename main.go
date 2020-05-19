@@ -23,7 +23,6 @@ func main() {
 	log.Printf("this is version %#v", version)
 
 	buf := make([]byte, *bufferSize)
-	rand.Read(buf)
 
 	perent := filepath.Dir(*fileName)
 	err := os.MkdirAll(perent, os.ModePerm)
@@ -43,6 +42,7 @@ func main() {
 	start := time.Now()
 
 	for i := 0; i < 1024**size; i++ {
+		rand.Read(buf)
 		file.Write(buf)
 
 	}

@@ -13,3 +13,7 @@ Usage of creator:
 
 > Please use it with care
 
+> Build Command:
+```bash 
+go build -ldflags "-w -s -X main.version=v1.0" -o create .
+```
